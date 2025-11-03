@@ -1,5 +1,5 @@
 import pygame
-from player import Player
+from player import *
 from constants import *
 from constants import SCREEN_WIDTH, SCREEN_HEIGHT
 
@@ -16,6 +16,8 @@ def main():
             if event.type == pygame.QUIT:
                 return
 
+        player.update(dt)
+        
         screen.fill(color="black")
         player.draw(screen)
         pygame.display.flip()
